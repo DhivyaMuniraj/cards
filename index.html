@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" a href="Zomatocards.css">
+    <title>Zomato</title>   
+</head>
+
+    
+
+<body>
+    <div class="main-container" id="main-container-1">
+
+    </div>
+    
+</body>
+<script>
+    const s=[
+        {
+            name:"KFC",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/chains/7/1400127/18948bbc7010759a363d74acb43454d9_o2_featured_v2.jpg?output-format=webp",
+            offer: "20% OFF",
+            time:"21 min",
+            rating:"3.9",
+            des1:"Burger,Fast Food,Biryani...",
+            des2:"₹200 for one",
+            order:"5725+ orders placed from here recently",
+        },
+        {
+            name: "Utambhog(JMB)",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/8/19158518/77c397e26bcb430d9e3834de1478e048_o2_featured_v2.jpg",
+            offer: "50% OFF upto 100",
+            time:"26 min",
+            rating:"4.0",
+            des1:"Mithai,Street Food,South...",
+            des2:"₹200 for one",
+            order:"37100+ orders placed from here recently"
+        
+        },
+        {
+            name:"Domino's Pizza",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/chains/0/1400070/0b0e4ec4915345d164d07f56548b7920_o2_featured_v2.jpg",
+            offer: "20% OFF",
+            time:"21 min",
+            rating:"3.9",
+            des1:"Burger,Fast Food,Biryani...",
+            des2:"₹200 for one",
+            order:"5725+ orders placed from here recently",
+        },
+        {
+            name: "Pizza Hut",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/chains/8/20035508/c708fcdb888abd4f493c0fdc67ac766e_o2_featured_v2.jpg?output-format=webp",
+            offer: "50% OFF upto 100",
+            time:"30 min",
+            rating:"3.6",
+            des1:"Pizza, Fast Food,Dessert...",
+            des2:"₹200 for one",
+            order:"2175+ orders placed from here recently"
+        },
+        {
+            name: "Tinku's",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/7/18880487/6f197c172268daf1aa792f429406f6a3_o2_featured_v2.jpg?output-format=webp",
+            offer: "50% OFF upto 100",
+            time:"21 min",
+            rating:"4.0",
+            des1:"Fast Food,Beverage,Sh...",
+            des2:"₹200 for one",
+            order:"6475+ orders placed from here recently"
+        },
+        {
+            name: "The Second Wife",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/1/18976721/51f729996934bb3aea857e30bd14be4b_o2_featured_v2.jpg?output-format=webp",
+            offer: "50% OFF upto 100",
+            time:"25 min",
+            rating:"3.5",
+            des1:"North Indian...",
+            des2:"₹200 for one",
+            order:"3350+ orders placed from here recently"
+        },
+        {
+            name: "Rasgulla House",
+            ops:"Pro extra 25% OFF",
+            image:"https://b.zmtcdn.com/data/pictures/3/1400503/0ce39882137ab72b97fa5ff626610497_o2_featured_v2.jpg",
+            offer: "50% OFF upto 100",
+            time:"25 min",
+            rating:"3.5",
+            des1:"Mithai...",
+            des2:"₹100 for one",
+            order:"3350+ orders placed from here recently"
+        },
+        {
+            name: "Ramesh Masala Dosa",
+            ops:"",
+            image:"https://b.zmtcdn.com/data/pictures/8/1400798/f9924ba4ce36e82286d68796e0643a96_o2_featured_v2.jpg",
+            offer: "50% OFF upto 100",
+            time:"33 min",
+            rating:"3.9",
+            des1:"South Indian,North...",
+            des2:"₹100 for one",
+            order:"17575+ orders placed from here recently"
+        },
+        {
+            name: "Cafe Kono",
+            ops:"Pro extra 15% OFF",
+            image:"https://b.zmtcdn.com/data/pictures/chains/1/1402201/fd0dacb70f8330460fb3c65086c89f6f_o2_featured_v2.jpg",
+            offer: "50% OFF upto 100",
+            time:"34 min",
+            rating:"3.5",
+            des1:"Cafe,Fast Food,Beve..",
+            des2:"₹250 for one",
+            order:"1675+ orders placed from here recently"
+        },
+
+    ];
+    
+    for(var i=0;i<s.length;i++){
+        var x=document.getElementById("main-container-1");
+        var y=document.createElement("div");
+        y.setAttribute("class","container");
+        x.appendChild(y);
+        var a=document.createElement("div");
+        a.setAttribute("class","image-content");
+        var img1=document.createElement("img");
+        img1.src=s[i].image;
+        img1.setAttribute("class","food-image");
+        y.appendChild(a);
+        y.appendChild(img1);
+        var subdiv=document.createElement("div");
+        subdiv.setAttribute("class","image-text");
+        a.appendChild(subdiv);
+
+
+        if(s[i].ops!=""){
+            var optional=document.createElement("p");
+            optional.setAttribute("class","ops1");
+            optional.innerText=s[i].ops;
+            a.appendChild(optional);
+
+        }
+        
+        var p1=document.createElement("p");
+        var p2=document.createElement("p");
+        p1.innerText=s[i].offer;
+        p2.innerText=s[i].time;
+        p1.setAttribute("class","offer");
+        p2.setAttribute("class","time");
+       
+        subdiv.appendChild(p1);
+        subdiv.appendChild(p2);
+        var b=document.createElement("div");
+        b.setAttribute("class","first-content");
+        y.appendChild(b);
+        var p3=document.createElement("p");
+        var p4=document.createElement("p");
+        p3.innerText=s[i].name;
+        p4.innerText=s[i].rating;
+        p3.setAttribute("class","item_name");
+        p4.setAttribute("class","rating");
+        b.appendChild(p3);
+        b.appendChild(p4);
+        var c=document.createElement("div");
+        c.setAttribute("class","second-content");
+        y.appendChild(c);
+        var p5=document.createElement("p");
+        var p6=document.createElement("p");
+        p5.innerText=s[i].des1;
+        p6.innerText=s[i].des2;
+        p5.setAttribute("class","item_description");
+        p6.setAttribute("class","item_description");
+        c.appendChild(p5);
+        c.appendChild(p6);
+        var d=document.createElement("hr");
+        d.setAttribute("class","third-line");
+        var e=document.createElement("div");
+        e.setAttribute("class","fourth-content");
+        y.appendChild(e);
+        var img2=document.createElement("img");
+        img2.src="https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png?output-format=webp";
+        img2.setAttribute("class","arrow");
+        var p7=document.createElement("p");
+        p7.innerText=s[i].order;
+        p7.setAttribute("class","order");
+        var img3=document.createElement("img");
+        img3.src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp";
+        img3.setAttribute("class","deliver-image");
+        e.appendChild(img2);
+        e.appendChild(p7);
+        e.appendChild(img3);
+
+    }
+
+
+</script>
+
+</html>
